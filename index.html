@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fogo de Chão dos Sonhos — 20 Modelos Completos | @maosaobraa2</title>
+  <meta name="description" content="20 modelos de fogo de chão com ficha técnica, medidas reais, lista de materiais e passo a passo. Construa você mesmo sem pedreiro por apenas R$ 17.">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --laranja: #e8621a;
+      --laranja-escuro: #c04e10;
+      --fundo: #0d0d0d;
+      --fundo2: #150a00;
+      --fundo3: #1a0d00;
+      --texto: #f0ede8;
+      --texto-muted: #b0a090;
+      --borda: #2a1a00;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Barlow', sans-serif; background: var(--fundo); color: var(--texto); }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; }
+
+    .container { max-width: 660px; margin: 0 auto; padding: 0 20px; }
+
+    /* Botão principal */
+    .btn-fire {
+      display: inline-block;
+      background: var(--laranja);
+      color: #fff;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      border-radius: 50px;
+      padding: 16px 36px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 24px rgba(232,98,26,0.45);
+      transition: background 0.2s, transform 0.1s;
+      text-align: center;
+    }
+    .btn-fire:hover { background: var(--laranja-escuro); transform: translateY(-2px); }
+
+    /* HERO */
+    #hero {
+      background: linear-gradient(180deg, #1a0800 0%, #0d0d0d 100%);
+      padding: 60px 20px 48px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      border: 1.5px solid var(--laranja);
+      background: #2a1000;
+      color: #e8a060;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-radius: 20px;
+      padding: 6px 18px;
+      margin-bottom: 24px;
+    }
+    #hero h1 {
+      font-size: clamp(26px, 5vw, 40px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      max-width: 660px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #hero .subtitulo {
+      font-size: 17px;
+      color: var(--texto-muted);
+      max-width: 580px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+    }
+    .hero-preco {
+      margin: 20px 0;
+    }
+    .hero-preco .riscado {
+      color: var(--texto-muted);
+      text-decoration: line-through;
+      font-size: 16px;
+    }
+    .hero-preco .destaque {
+      font-size: 52px;
+      font-weight: 800;
+      color: var(--laranja);
+      line-height: 1;
+    }
+    .selos {
+      font-size: 13px;
+      color: var(--texto-muted);
+      margin-top: 14px;
+    }
+
+    /* SEÇÃO PROBLEMA */
+    #problema {
+      background: var(--fundo2);
+      padding: 60px 20px;
+    }
+    .section-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--laranja);
+      border: 1px solid var(--laranja);
+      border-radius: 4px;
+      padding: 3px 10px;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 800;
+      margin-bottom: 32px;
+      max-width: 600px;
+    }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 660px;
+      margin: 0 auto;
+    }
+    @media (max-width: 480px) { .cards-grid { grid-template-columns: 1fr; } }
+    .card-problema {
+      background: #1a1008;
+      border: 1px solid #2a1800;
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .card-problema .emoji { font-size: 28px; margin-bottom: 10px; }
+    .card-problema h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .card-problema p { font-size: 14px; color: var(--texto-muted); line-height: 1.5; }
+
+    /* SEÇÃO SOLUÇÃO */
+    #solucao {
+      background: var(--fundo3);
+      padding: 60px 20px;
+    }
+    .lista-solucao {
+      list-style: none;
+      max-width: 620px;
+      margin: 0 auto 32px;
+    }
+    .lista-solucao li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--borda);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .lista-solucao li:last-child { border-bottom: none; }
+    .lista-solucao li .icone { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+
+    /* CARROSSEL */
+    #modelos {
+      background: var(--fundo);
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .carrossel-wrapper {
+      position: relative;
+      overflow: hidden;
+      max-width: 660px;
+      margin: 0 auto 16px;
+    }
+    .carrossel-track {
+      display: flex;
+      gap: 12px;
+      transition: transform 0.35s ease;
+    }
+    .card-modelo {
+      flex: 0 0 calc(50% - 6px);
+      background: #1a0d00;
+      border: 1px solid var(--borda);
+      border-radius: 14px;
+      overflow: hidden;
+      text-align: left;
+    }
+    @media (max-width: 639px) {
+      .card-modelo { flex: 0 0 100%; }
+    }
+    .card-modelo img { width: 100%; height: 200px; object-fit: cover; }
+    .card-modelo-body { padding: 14px; }
+    .card-modelo .num { font-size: 28px; font-weight: 800; color: var(--laranja); line-height: 1; }
+    .card-modelo .nome { font-size: 16px; font-weight: 700; color: var(--texto); margin: 4px 0 2px; }
+    .card-modelo .sub { font-size: 13px; color: var(--texto-muted); }
+    .carrossel-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .carrossel-nav button {
+      background: var(--laranja);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .carrossel-nav button:hover { background: var(--laranja-escuro); }
+    #carrossel-counter { font-size: 15px; color: var(--texto-muted); min-width: 60px; }
+
+    /* 3 DESTAQUES */
+    #destaques {
+      background: var(--fundo2);
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      max-width: 700px;
+      margin: 32px auto 0;
+    }
+    @media (max-width: 640px) { .grid-3 { grid-template-columns: 1fr; } }
+    .card-destaque {
+      background: #1a0d00;
+      border: 1px solid var(--borda);
+      border-radius: 14px;
+      overflow: hidden;
+      text-align: left;
+    }
+    .card-destaque img { width: 100%; height: 200px; object-fit: cover; }
+    .card-destaque-body { padding: 16px; }
+    .card-destaque h3 { font-size: 16px; font-weight: 800; color: var(--texto); margin-bottom: 4px; }
+    .card-destaque .subtag { font-size: 13px; color: var(--laranja); font-weight: 700; margin-bottom: 6px; }
+    .card-destaque p { font-size: 13px; color: var(--texto-muted); line-height: 1.5; }
+
+    /* ÂNCORA DE VALOR */
+    #valor {
+      background: var(--fundo3);
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .tabela-valor {
+      width: 100%;
+      max-width: 560px;
+      margin: 0 auto 24px;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+    .tabela-valor td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--borda);
+    }
+    .tabela-valor td:last-child { text-align: right; font-weight: 700; }
+    .tabela-valor tr:last-child td {
+      background: #1a0800;
+      color: var(--laranja);
+      font-weight: 800;
+      font-size: 17px;
+      border-bottom: none;
+    }
+    .valor-texto {
+      max-width: 500px;
+      margin: 0 auto 28px;
+      color: var(--texto-muted);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* PARA QUEM É */
+    #paraquem {
+      background: var(--fundo);
+      padding: 60px 20px;
+    }
+    .lista-check, .lista-x {
+      list-style: none;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .lista-check li, .lista-x li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 0;
+      font-size: 16px;
+      line-height: 1.5;
+      border-bottom: 1px solid #1a1000;
+    }
+    .lista-check li:last-child, .lista-x li:last-child { border-bottom: none; }
+    .lista-check li::before { content: "✅"; flex-shrink: 0; }
+    .lista-x li::before { content: "❌"; flex-shrink: 0; }
+    .lista-x { margin-top: 16px; }
+
+    /* GARANTIA */
+    #garantia {
+      background: var(--fundo2);
+      padding: 60px 20px;
+    }
+    .garantia-box {
+      background: #0d1a0d;
+      border: 1px solid #1a4a1a;
+      border-radius: 16px;
+      padding: 40px 32px;
+      text-align: center;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .garantia-box .icone-g { font-size: 48px; margin-bottom: 16px; }
+    .garantia-box h3 { font-size: 22px; font-weight: 800; color: #4aaa4a; margin-bottom: 14px; }
+    .garantia-box p { font-size: 16px; color: #8aaa8a; line-height: 1.7; }
+
+    /* FAQ */
+    #faq {
+      background: var(--fundo3);
+      padding: 60px 20px;
+    }
+    .faq-lista {
+      max-width: 640px;
+      margin: 32px auto 0;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--borda);
+    }
+    .faq-pergunta {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--texto);
+      font-family: 'Barlow', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      text-align: left;
+      padding: 18px 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .faq-chevron {
+      font-size: 20px;
+      color: var(--laranja);
+      transition: transform 0.25s;
+      flex-shrink: 0;
+    }
+    .faq-item.aberto .faq-chevron { transform: rotate(180deg); }
+    .faq-resposta {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      color: var(--texto-muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .faq-item.aberto .faq-resposta { max-height: 300px; padding-bottom: 16px; }
+
+    /* URGÊNCIA */
+    #urgencia {
+      background: var(--fundo);
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .urgencia-box {
+      border: 2px solid var(--laranja);
+      background: #1a0800;
+      border-radius: 16px;
+      margin: 0 auto;
+      max-width: 580px;
+      padding: 40px 28px;
+    }
+    .urgencia-box h2 { font-size: clamp(24px, 4vw, 34px); font-weight: 800; margin-bottom: 12px; }
+    .urgencia-box p { color: var(--texto-muted); margin-bottom: 20px; font-size: 16px; }
+    #timer-display {
+      font-size: 54px;
+      font-weight: 800;
+      color: var(--laranja);
+      margin: 0 0 16px;
+      letter-spacing: 2px;
+    }
+    .urgencia-preco .riscado { color: var(--texto-muted); text-decoration: line-through; font-size: 16px; }
+    .urgencia-preco .grande { font-size: 44px; font-weight: 800; color: var(--laranja); line-height: 1; display: block; margin-bottom: 24px; }
+
+    /* BARRA FLUTUANTE */
+    #barra-flutuante {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #1a0800;
+      border-top: 2px solid var(--laranja);
+      padding: 12px 20px;
+      z-index: 999;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .barra-texto { font-size: 15px; font-weight: 700; }
+    .barra-btn {
+      background: var(--laranja);
+      color: #fff;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 800;
+      font-size: 15px;
+      border: none;
+      border-radius: 50px;
+      padding: 10px 24px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .barra-btn:hover { background: var(--laranja-escuro); }
+
+    /* FOOTER */
+    footer {
+      background: #0a0500;
+      padding: 32px 20px;
+      text-align: center;
+    }
+    footer .footer-marca { color: var(--laranja); font-weight: 700; font-size: 16px; margin-bottom: 8px; }
+    footer .footer-copy { color: var(--texto-muted); font-size: 13px; margin-bottom: 6px; }
+    footer .footer-disc { color: #6a5a4a; font-size: 12px; }
+
+    /* POPUPS */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 16px;
+    }
+    .popup-modal {
+      background: #fff;
+      color: #333;
+      border-radius: 16px;
+      max-width: 380px;
+      width: 100%;
+      padding: 36px 28px 28px;
+      text-align: center;
+      position: relative;
+    }
+    .popup-fechar {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      background: none;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+      color: #666;
+      line-height: 1;
+    }
+    .popup-modal h3 { font-size: 20px; font-weight: 800; margin-bottom: 12px; color: #222; }
+    .popup-modal p { font-size: 15px; color: #555; margin-bottom: 16px; line-height: 1.5; }
+    .popup-preco-riscado { color: #999; text-decoration: line-through; font-size: 15px; }
+    .popup-preco-destaque { font-size: 40px; font-weight: 800; color: var(--laranja); display: block; margin-bottom: 20px; line-height: 1; }
+    .btn-fire-popup {
+      display: block;
+      width: 100%;
+      background: var(--laranja);
+      color: #fff;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 800;
+      font-size: 17px;
+      border: none;
+      border-radius: 50px;
+      padding: 14px 20px;
+      cursor: pointer;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 16px rgba(232,98,26,0.35);
+    }
+    .btn-fire-popup:hover { background: var(--laranja-escuro); }
+    .popup-nao {
+      font-size: 12px;
+      color: #aaa;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: 'Barlow', sans-serif;
+    }
+    .popup-nao:hover { color: #888; }
+
+    /* Centralizadores de seção */
+    .sec-center { text-align: center; }
+    .mt32 { margin-top: 32px; }
+    .mb32 { margin-bottom: 32px; }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container sec-center">
+    <div class="hero-badge">🔥 20 MODELOS · FICHA TÉCNICA · PASSO A PASSO · LISTA DE MATERIAIS</div>
+    <h1>Construa o <span style="color:var(--laranja)">Fogo de Chão dos Sonhos</span> no Seu Quintal — Sem Pedreiro, Sem Obra Cara</h1>
+    <p class="subtitulo">Do Circular Clássico ao modelo com Pérgola: 20 projetos completos com medidas reais, lista de materiais exata e instruções que qualquer pessoa consegue seguir.</p>
+    <img src="images/modelo-01-circular-classico.jpg" alt="Fogo de Chão Circular Clássico" style="border-radius:14px; margin:24px auto; max-width:620px; width:100%;">
+    <div class="hero-preco">
+      <span class="riscado">De R$ 97</span>
+      <div class="destaque">R$ 17</div>
+    </div>
+    <a href="https://pay.kiwify.com.br/BnkKoFt" id="hero-cta" class="btn-fire" data-utm-content="botao1">🔥 Quero Meu Fogo de Chão Agora — R$ 17</a>
+    <p class="selos">🔒 Pagamento seguro · ⚡ Acesso imediato · 7 dias de garantia</p>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section id="problema">
+  <div class="container">
+    <span class="section-tag">O PROBLEMA</span>
+    <h2 class="section-title">Você sonha com aquela fogueira no quintal. Mas na hora de começar…</h2>
+    <div class="cards-grid">
+      <div class="card-problema">
+        <div class="emoji">🤔</div>
+        <h3>"Por onde eu começo?"</h3>
+        <p>Sem projeto, sem medidas, sem noção de quantos tijolos comprar.</p>
+      </div>
+      <div class="card-problema">
+        <div class="emoji">😤</div>
+        <h3>"O pedreiro cobrou caro demais"</h3>
+        <p>Um fogo simples: R$ 1.500, R$ 2.000, R$ 3.000 só de mão de obra.</p>
+      </div>
+      <div class="card-problema">
+        <div class="emoji">📱</div>
+        <h3>"Tentei seguir um vídeo no YouTube"</h3>
+        <p>Constrói em 5 minutos, não fala as medidas, não mostra os materiais.</p>
+      </div>
+      <div class="card-problema">
+        <div class="emoji">😰</div>
+        <h3>"Tenho medo de rachar"</h3>
+        <p>Tijolo furado, argamassa errada — estrutura trinca na primeira fogueira.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUÇÃO -->
+<section id="solucao">
+  <div class="container sec-center">
+    <span class="section-tag">A SOLUÇÃO</span>
+    <h2 class="section-title" style="margin-left:auto;margin-right:auto;">O Guia Técnico Completo que o Pedreiro Não Vai Te Dar</h2>
+    <ul class="lista-solucao" style="text-align:left;">
+      <li><span class="icone">🔥</span><span><strong>20 modelos diferentes</strong> — do mais simples ao mais sofisticado</span></li>
+      <li><span class="icone">📐</span><span><strong>Fichas técnicas com medidas reais</strong> em cm — sem "ajuste no olho"</span></li>
+      <li><span class="icone">🧱</span><span><strong>Lista de materiais com quantidades exatas</strong> — você chega na loja sabendo o que pedir</span></li>
+      <li><span class="icone">👷</span><span><strong>Passo a passo em 8–9 etapas</strong> por modelo, com diagrama de planta e corte</span></li>
+      <li><span class="icone">⚠️</span><span><strong>Erros comuns e como evitar</strong> — para não desperdiçar dinheiro</span></li>
+      <li><span class="icone">🛡️</span><span><strong>Dicas de segurança</strong> em cada projeto para usar com a família tranquila</span></li>
+    </ul>
+    <a href="https://pay.kiwify.com.br/BnkKoFt" class="btn-fire" data-utm-content="botao2">🔥 Quero os 20 Modelos por R$ 17</a>
+  </div>
+</section>
+
+<!-- CARROSSEL DOS 20 MODELOS -->
+<section id="modelos">
+  <div class="container sec-center">
+    <span class="section-tag">OS 20 MODELOS</span>
+    <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Escolha o seu favorito — ou construa todos</h2>
+    <p style="color:var(--texto-muted);margin-bottom:28px;">Cada um com ficha técnica, medidas reais e passo a passo completo</p>
+  </div>
+  <div class="carrossel-wrapper">
+    <div class="carrossel-track" id="carrossel-track">
+      <div class="card-modelo"><img src="images/modelo-01-circular-classico.jpg" alt="Circular Clássico"><div class="card-modelo-body"><div class="num">01</div><div class="nome">Circular Clássico</div><div class="sub">O mais popular do Brasil</div></div></div>
+      <div class="card-modelo"><img src="images/modelo-02-quadrado-embutido.jpg" alt="Quadrado Embutido"><div class="card-modelo-body"><div class="num">02</div><div class="nome">Quadrado Embutido</div><div class="sub">Elegante e nivelado</div></div></div>
+      <div class="card-modelo"><img src="images/modelo-03-circular-enterrado.jpg" alt="Circular Enterrado"><div class="card-modelo-body"><div class="num">03</div><div class="nome">Circular Enterrado</div><div class="sub">Máxima segurança</div></div></div>
+      <div class="card-modelo"><img src="images/modelo-04-meia-lua-elevado.jpg" alt="Meia-Lua Elevado"><div class="card-modelo-body"><div class="num">04</div><div class="nome">Meia-Lua Elevado</div><div class="sub">Sofisticado</div></div></div>
+      <div class="card-modelo"><img src="images/modelo-05-banco-integrado.jpg" alt="Com Banco Integrado"><div class="card-modelo-body"><div class="num">05</div><div class="nome">Com Banco Integrado</div><div class="sub">Favorito das famílias</div></div></div>
+      <div class="card-modelo"><img src="images/modelo-06-rustico-campestre.jpg" alt="Rústico Campestre"><div class="card-modelo-body"><div class="num">06</div><div class="nome">Rústico Campestre</div><div class="sub">Charme do campo</div></div></div>
+      <div class="card-modelo"><img src="images/modelo-07-minimalista-moderno.jpg" alt="Minimalista Moderno"><div class="card-modelo-body"><div class="num">07</div><div class="nome">Minimalista Moderno</div><div class="sub">Contemporâneo</div></div></div>
+      <div class="card-modelo"><img src="images/modelo-08-vista-aerea-piso-radial.jpg" alt="Vista Aérea — Piso Radial"><div class="card-modelo-body"><div class="num">08</div><div class="nome">Vista Aérea — Piso Radial</div><div class="sub">Mandala de tijolos</div></div></div>
+      <div class="card-modelo"><img src="images/modelo-09-octogonal-decorativo.jpg" alt="Octogonal Decorativo"><div class="card-modelo-body"><div class="num">09</div><div class="nome">Octogonal Decorativo</div><div class="sub">Projeto premium</div></div></div>
+      <div class="card-modelo"><img src="images/modelo-10-caminho-de-acesso.jpg" alt="Com Caminho de Acesso"><div class="card-modelo-body"><div class="num">10</div><div class="nome">Com Caminho de Acesso</div><div class="sub">Caminho integrado</div></div></div>
+      <div class="card-modelo"><img src="images/modelo-11-area-de-mata.jpg" alt="Em Área de Mata"><div class="card-modelo-body"><div class="num">11</div><div class="nome">Em Área de Mata</div><div class="sub">Integrado à natureza</div></div></div>
+      <div class="card-modelo"><img src="images/modelo-12-arena-fechada.jpg" alt="Arena Fechada"><div class="card-modelo-body"><div class="num">12</div><div class="nome">Arena Fechada</div><div class="sub">Efeito anfiteatro</div></div></div>
+      <div class="card-modelo"><img src="images/modelo-13-jardim-com-iluminacao.jpg" alt="Jardim com Iluminação"><div class="card-modelo-body"><div class="num">13</div><div class="nome">Jardim com Iluminação</div><div class="sub">Paisagismo e luz</div></div></div>
+      <div class="card-modelo"><img src="images/modelo-14-colonial-residencial.jpg" alt="Colonial Residencial"><div class="card-modelo-body"><div class="num">14</div><div class="nome">Colonial Residencial</div><div class="sub">Integrado à residência</div></div></div>
+      <div class="card-modelo"><img src="images/modelo-15-tropical-com-muro.jpg" alt="Tropical com Muro"><div class="card-modelo-body"><div class="num">15</div><div class="nome">Tropical com Muro</div><div class="sub">Muro semicircular</div></div></div>
+      <div class="card-modelo"><img src="images/modelo-16-floresta-com-cordao.jpg" alt="Floresta com Cordão"><div class="card-modelo-body"><div class="num">16</div><div class="nome">Floresta com Cordão</div><div class="sub">Ambiente florestal</div></div></div>
+      <div class="card-modelo"><img src="images/modelo-17-quadrado-elevado.jpg" alt="Quadrado Elevado"><div class="card-modelo-body"><div class="num">17</div><div class="nome">Quadrado Elevado</div><div class="sub">Robusto e durável</div></div></div>
+      <div class="card-modelo"><img src="images/modelo-18-afundado-rustico.jpg" alt="Afundado Rústico"><div class="card-modelo-body"><div class="num">18</div><div class="nome">Afundado Rústico</div><div class="sub">Estilo fazenda</div></div></div>
+      <div class="card-modelo"><img src="images/modelo-19-patio-espinha-de-peixe.jpg" alt="Pátio Espinha de Peixe"><div class="card-modelo-body"><div class="num">19</div><div class="nome">Pátio Espinha de Peixe</div><div class="sub">Piso herringbone</div></div></div>
+      <div class="card-modelo"><img src="images/modelo-20-pergola-ao-fundo.jpg" alt="Com Pérgola ao Fundo"><div class="card-modelo-body"><div class="num">20</div><div class="nome">Com Pérgola ao Fundo</div><div class="sub">Área de convívio completa</div></div></div>
+    </div>
+  </div>
+  <div class="carrossel-nav">
+    <button id="prev-btn" aria-label="Anterior">&#8592;</button>
+    <span id="carrossel-counter">1 / 20</span>
+    <button id="next-btn" aria-label="Próximo">&#8594;</button>
+  </div>
+  <div class="sec-center">
+    <a href="https://pay.kiwify.com.br/BnkKoFt" class="btn-fire" data-utm-content="botao3">🔥 Quero Todos os 20 Modelos por R$ 17</a>
+  </div>
+</section>
+
+<!-- 3 DESTAQUES -->
+<section id="destaques">
+  <div class="container sec-center">
+    <h2 class="section-title" style="margin-left:auto;margin-right:auto;">3 modelos que as famílias mais amam</h2>
+    <div class="grid-3">
+      <div class="card-destaque">
+        <img src="images/modelo-01-circular-classico.jpg" alt="Circular Clássico">
+        <div class="card-destaque-body">
+          <h3>Circular Clássico</h3>
+          <div class="subtag">O mais construído do Brasil</div>
+          <p>⌀ 107 cm · 3 fiadas · ~70 tijolos · pronto em 1 fim de semana</p>
+        </div>
+      </div>
+      <div class="card-destaque">
+        <img src="images/modelo-05-banco-integrado.jpg" alt="Com Banco Integrado">
+        <div class="card-destaque-body">
+          <h3>Com Banco Integrado</h3>
+          <div class="subtag">O favorito das famílias</div>
+          <p>Fogo + banco circular · acomoda 6–8 pessoas · piso concêntrico incluso</p>
+        </div>
+      </div>
+      <div class="card-destaque">
+        <img src="images/modelo-20-pergola-ao-fundo.jpg" alt="Com Pérgola ao Fundo">
+        <div class="card-destaque-body">
+          <h3>Com Pérgola ao Fundo</h3>
+          <div class="subtag">Maior valorização do imóvel</div>
+          <p>Fogo + pérgola + piso integrado · o projeto mais completo da coleção</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÂNCORA DE VALOR -->
+<section id="valor">
+  <div class="container sec-center">
+    <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Quanto custaria isso no mercado?</h2>
+    <table class="tabela-valor">
+      <tr><td>Consultoria com pedreiro</td><td>R$ 150–300</td></tr>
+      <tr><td>Mão de obra de um fogo simples</td><td>R$ 800–2.500</td></tr>
+      <tr><td>Curso de alvenaria online</td><td>R$ 197–497</td></tr>
+      <tr><td>🔥 Fogo de Chão dos Sonhos</td><td>R$ 17</td></tr>
+    </table>
+    <p class="valor-texto">Você paga menos do que um saco de cimento e recebe 20 projetos prontos para executar.</p>
+    <a href="https://pay.kiwify.com.br/BnkKoFt" class="btn-fire" data-utm-content="botao4">🔥 Garantir Meu Guia por R$ 17</a>
+  </div>
+</section>
+
+<!-- PARA QUEM É -->
+<section id="paraquem">
+  <div class="container">
+    <span class="section-tag">PARA QUEM É</span>
+    <h2 class="section-title">Para quem foi feito esse guia</h2>
+    <ul class="lista-check">
+      <li>Pra quem quer construir sem depender de pedreiro</li>
+      <li>Pra quem tem um quintal e quer criar aquele cantinho de reunir a família</li>
+      <li>Pra quem já tentou seguir vídeo no YouTube e ficou perdido</li>
+      <li>Pra quem não tem experiência em alvenaria mas tem vontade de aprender</li>
+      <li>Pra quem quer saber exatamente o que comprar antes de ir na loja</li>
+    </ul>
+    <ul class="lista-x" style="margin-top:24px;">
+      <li>Não é pra quem quer apenas inspiração — aqui você vai construir de verdade</li>
+    </ul>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section id="garantia">
+  <div class="container">
+    <div class="garantia-box">
+      <div class="icone-g">🛡️</div>
+      <h3>Garantia Total de 7 Dias</h3>
+      <p>Se em até 7 dias você não gostar por qualquer motivo, devolvemos 100% do valor. Sem perguntas. Sem burocracia. O risco é 100% nosso.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <span class="section-tag">DÚVIDAS</span>
+    <h2 class="section-title">Perguntas Frequentes</h2>
+    <div class="faq-lista">
+
+      <div class="faq-item">
+        <button class="faq-pergunta">Preciso ter experiência em obras? <span class="faq-chevron">▾</span></button>
+        <div class="faq-resposta">Não. Os modelos mais simples foram feitos para quem nunca assentou um tijolo. O Circular Clássico e o Minimalista Moderno são ideais para iniciantes.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-pergunta">Quais ferramentas eu preciso? <span class="faq-chevron">▾</span></button>
+        <div class="faq-resposta">Para a maioria dos modelos: colher de pedreiro, nível, trena e régua. Apenas os modelos avançados (octogonal, espinha de peixe) precisam de cortadeira de disco.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-pergunta">As medidas são reais? <span class="faq-chevron">▾</span></button>
+        <div class="faq-resposta">Sim. Todos os 20 projetos têm dimensões exatas em centímetros, diagrama de planta baixa e corte.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-pergunta">Como vou receber? <span class="faq-chevron">▾</span></button>
+        <div class="faq-resposta">Acesso imediato após o pagamento. Você baixa o PDF e pode abrir no celular enquanto constrói.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-pergunta">Funciona em quintal pequeno? <span class="faq-chevron">▾</span></button>
+        <div class="faq-resposta">Sim. O menor modelo (Minimalista Moderno) cabe em apenas 96 cm de diâmetro.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-pergunta">E se eu não gostar? <span class="faq-chevron">▾</span></button>
+        <div class="faq-resposta">Garantia de 7 dias, devolução total do valor pago, sem perguntas e sem burocracia.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- URGÊNCIA FINAL -->
+<section id="urgencia">
+  <div class="urgencia-box">
+    <h2>Essa oferta não vai durar</h2>
+    <p>Preço de lançamento: R$ 17. Após esse período inicial, o valor sobe.</p>
+    <div id="timer-display">30:00</div>
+    <div class="urgencia-preco">
+      <span class="riscado">De R$ 97</span>
+      <span class="grande">R$ 17</span>
+    </div>
+    <a href="https://pay.kiwify.com.br/BnkKoFt" class="btn-fire" style="width:100%;max-width:380px;display:block;margin:0 auto 16px;" data-utm-content="botao5">🔥 Garantir Meu Fogo de Chão — R$ 17</a>
+    <p class="selos" style="color:var(--texto-muted);font-size:13px;">🔒 Pagamento seguro · ⚡ Acesso imediato</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-marca">@maosaobraa2 — Mãos à Obra 2</p>
+  <p class="footer-copy">© 2025 Mãos à Obra · contato@maosaobraa2.com.br</p>
+  <p class="footer-disc">Os resultados apresentados podem variar conforme a dedicação de cada pessoa.</p>
+</footer>
+
+<!-- BARRA FLUTUANTE -->
+<div id="barra-flutuante">
+  <span class="barra-texto">🔥 Fogo de Chão dos Sonhos — <strong style="color:var(--laranja)">R$ 17</strong></span>
+  <a href="https://pay.kiwify.com.br/BnkKoFt" class="barra-btn" data-utm-content="botaofixado">Garantir Agora ➜</a>
+</div>
+
+<!-- POPUP SAÍDA -->
+<div class="popup-overlay" id="popupSaida">
+  <div class="popup-modal">
+    <button class="popup-fechar" aria-label="Fechar">×</button>
+    <h3>🚨 Espera! Você está saindo sem o projeto…</h3>
+    <p>Essa oferta pode não aparecer quando você voltar. 20 modelos completos por apenas:</p>
+    <div class="popup-preco-riscado">De R$ 97</div>
+    <span class="popup-preco-destaque">R$ 17</span>
+    <a href="https://pay.kiwify.com.br/BnkKoFt" class="btn-fire-popup" data-utm-content="popupsaida">🔥 Quero por R$ 17 Agora</a>
+    <button class="popup-nao">Não, vou continuar sem o guia</button>
+  </div>
+</div>
+
+<!-- POPUP TIMER -->
+<div class="popup-overlay" id="popupTimer">
+  <div class="popup-modal">
+    <button class="popup-fechar" aria-label="Fechar">×</button>
+    <h3>🔥 Ainda está avaliando?</h3>
+    <p>Quem montou o fogo de chão reuniu a família no próximo fim de semana. 20 modelos completos por R$ 17.</p>
+    <span class="popup-preco-destaque">R$ 17</span>
+    <a href="https://pay.kiwify.com.br/BnkKoFt" class="btn-fire-popup" data-utm-content="popuptimer">Garantir Agora</a>
+    <button class="popup-nao">Não, prefiro esperar</button>
+  </div>
+</div>
+
+<!-- SCRIPTS -->
+<script>
+// UTM
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  var utmKeys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+  var utmParams = {};
+  var hasUtm = false;
+  utmKeys.forEach(function(k){
+    var v = params.get(k);
+    if(v){ utmParams[k] = v; hasUtm = true; }
+  });
+  if(hasUtm){
+    sessionStorage.setItem('maosaobraa_utms', JSON.stringify(utmParams));
+  } else {
+    var saved = sessionStorage.getItem('maosaobraa_utms');
+    if(saved){ try{ utmParams = JSON.parse(saved); hasUtm = true; }catch(e){} }
+  }
+  function injetarUTMs(){
+    document.querySelectorAll('a[href*="pay.kiwify.com.br"]').forEach(function(link){
+      try{
+        var url = new URL(link.href);
+        if(hasUtm){
+          Object.keys(utmParams).forEach(function(k){ url.searchParams.set(k, utmParams[k]); });
+        }
+        var btnContent = link.getAttribute('data-utm-content');
+        if(btnContent && !url.searchParams.get('utm_content')){
+          url.searchParams.set('utm_content', btnContent);
+        }
+        link.href = url.toString();
+      }catch(e){}
+    });
+  }
+  document.addEventListener('DOMContentLoaded', injetarUTMs);
+  window.addEventListener('load', injetarUTMs);
+  window.reinjetarUTMs = injetarUTMs;
+})();
+</script>
+
+<script>
+// Timer Evergreen
+(function(){
+  var DURACAO = 30 * 60 * 1000;
+  var chave = 'fogochao_timer_expira';
+  var expira = parseInt(localStorage.getItem(chave));
+  if(!expira || Date.now() > expira){
+    expira = Date.now() + DURACAO;
+    localStorage.setItem(chave, expira);
+  }
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function atualizar(){
+    var diff = Math.max(0, expira - Date.now());
+    var el = document.getElementById('timer-display');
+    if(el) el.textContent = pad(Math.floor(diff/60000)) + ':' + pad(Math.floor((diff%60000)/1000));
+  }
+  atualizar();
+  setInterval(atualizar, 1000);
+})();
+</script>
+
+<script>
+// Carrossel
+(function(){
+  var track = document.getElementById('carrossel-track');
+  var counter = document.getElementById('carrossel-counter');
+  if(!track) return;
+  var total = track.children.length;
+  var current = 0;
+  function getPerView(){ return window.innerWidth >= 640 ? 2 : 1; }
+
+  function goTo(idx){
+    var perView = getPerView();
+    current = Math.max(0, Math.min(idx, total - perView));
+    var cardW = track.children[0].offsetWidth;
+    var gap = 12;
+    track.style.transform = 'translateX(-' + (current * (cardW + gap)) + 'px)';
+    if(counter) counter.textContent = (current + 1) + ' / ' + total;
+  }
+
+  document.getElementById('prev-btn').addEventListener('click', function(){ goTo(current - 1); });
+  document.getElementById('next-btn').addEventListener('click', function(){ goTo(current + 1); });
+
+  var startX = 0;
+  track.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; }, {passive:true});
+  track.addEventListener('touchend', function(e){
+    var diff = startX - e.changedTouches[0].clientX;
+    if(Math.abs(diff) > 40) goTo(diff > 0 ? current+1 : current-1);
+  }, {passive:true});
+
+  window.addEventListener('resize', function(){ goTo(0); });
+  goTo(0);
+})();
+</script>
+
+<script>
+// Barra Flutuante
+(function(){
+  var barra = document.getElementById('barra-flutuante');
+  var heroCta = document.getElementById('hero-cta');
+  if(!barra || !heroCta) return;
+  var obs = new IntersectionObserver(function(entries){
+    barra.style.display = entries[0].isIntersecting ? 'none' : 'flex';
+  }, { threshold: 0.1 });
+  obs.observe(heroCta);
+})();
+</script>
+
+<script>
+// FAQ Accordion
+document.querySelectorAll('.faq-pergunta').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('aberto');
+    document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('aberto'); });
+    if(!isOpen) item.classList.add('aberto');
+  });
+});
+</script>
+
+<script>
+// Popups
+// Exit intent
+document.addEventListener('mouseleave', function(e){
+  if(e.clientY <= 0 && !sessionStorage.getItem('fogochao_exitpop')){
+    sessionStorage.setItem('fogochao_exitpop','1');
+    document.getElementById('popupSaida').style.display = 'flex';
+    if(window.reinjetarUTMs) window.reinjetarUTMs();
+  }
+});
+
+// Timer 20s
+setTimeout(function(){
+  if(!sessionStorage.getItem('fogochao_timerpop')){
+    sessionStorage.setItem('fogochao_timerpop','1');
+    document.getElementById('popupTimer').style.display = 'flex';
+    if(window.reinjetarUTMs) window.reinjetarUTMs();
+  }
+}, 20000);
+
+// Fechar popups — botão X e links "não"
+document.querySelectorAll('.popup-fechar, .popup-nao').forEach(function(el){
+  el.addEventListener('click', function(){
+    document.querySelectorAll('.popup-overlay').forEach(function(p){ p.style.display = 'none'; });
+  });
+});
+
+// Fechar ao clicar fora do modal
+document.querySelectorAll('.popup-overlay').forEach(function(overlay){
+  overlay.addEventListener('click', function(e){
+    if(e.target === overlay) overlay.style.display = 'none';
+  });
+});
+</script>
+
+</body>
+</html>
