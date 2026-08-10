@@ -569,8 +569,9 @@
       try{
         var url = new URL(link.href);
         if(hasUtm){ Object.keys(utmParams).forEach(function(k){ url.searchParams.set(k, utmParams[k]); }); }
-        var btnContent = link.getAttribute('data-utm-content');
-        if(btnContent && !url.searchParams.get('utm_content')){ url.searchParams.set('utm_content', btnContent); }
+        // O botão/pop-up vai em sck (rastreio secundário Kiwify), nunca em UTM.
+        var btnId = link.getAttribute('data-utm-content');
+        if(btnId){ url.searchParams.set('sck', btnId); }
         link.href = url.toString();
       }catch(e){}
     });
