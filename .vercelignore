@@ -1,0 +1,6 @@
+# Arquivos de trabalho: ficam versionados no git, mas NAO sao publicados.
+# Sem isto, o Vercel serve qualquer arquivo do repo numa URL publica
+# (ex.: /copy-pagina-x.md), expondo copy, conteudo bruto e material interno.
+*.md
+*.py
+.claude/
